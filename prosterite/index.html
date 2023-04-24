@@ -13,9 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    </head>
-     <script>
+<script>
     var urlBackRedirect = 'https://oleodesementedeabobora.com/'; // lembre-se de usar a url sem espaços
     // não altere nada abaixo dessa linha
     urlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +
@@ -29,7 +27,22 @@
         }, 1);
     };
 </script>
+    </head>
     <body>
+    	<script>
+    var urlBackRedirect = 'https://oleodesementedeabobora.com/'; // lembre-se de usar a url sem espaços
+    // não altere nada abaixo dessa linha
+    urlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+    history.pushState({}, "", location.href);
+    history.pushState({}, "", location.href);
+    window.onpopstate = function () {
+        setTimeout(function () {
+            location.href = urlBackRedirect;
+        }, 1);
+    };
+</script>
         <header>
             <div class="botao-menu">
                 <div class="burguer"></div>
